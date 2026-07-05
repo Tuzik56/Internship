@@ -1,0 +1,9 @@
+torch
+torchvision
+ultralytics
+transformers
+pillow
+pyyaml
+pycocotools
+numpy
+matplotlib

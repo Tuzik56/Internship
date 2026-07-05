@@ -1,0 +1,51 @@
+# ==== Python ====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# ==== Виртуальное окружение ====
+.venv/
+venv/
+env/
+
+# ==== IDE ====
+.vscode/
+.idea/
+
+# ==== Jupyter ====
+.ipynb_checkpoints/
+
+# ==== Данные ====
+# Сырые изображения и разметка KITTI - датасет скачивается отдельно, см. README
+data/raw/
+# Сгенерированные форматы (COCO JSON, YOLO images/labels) - пересоздаются
+# скриптами экспорта (coco_export.py, yolo_export.py), в репозитории не нужны
+data/processed/annotations/
+data/processed/yolo/
+# train/val split НЕ игнорируем - это часть воспроизводимости эксперимента
+# (data/processed/splits/train.txt, val.txt остаются в репозитории)
+
+# ==== Результаты обучения ====
+# Веса моделей - сотни МБ на модель, GitHub не примет файл больше 100 МБ
+results/checkpoints/
+results/yolo_runs/
+runs/
+# Логи (json/csv с историей обучения) оставляем - на их основе строятся
+# графики и сравнение моделей в отчёте
+
+# ==== Предобученные/скачанные веса ====
+*.pt
+*.pth
+*.safetensors
+
+# ==== Кэш ====
+.cache/
+*.cache
+.hf_cache/
+
+# ==== OS ====
+.DS_Store
+Thumbs.db
